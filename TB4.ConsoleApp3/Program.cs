@@ -1,10 +1,13 @@
 ﻿using Microsoft.Data.SqlClient;
 using TB4.ConsoleApp3;
 
-AdoDotNetSample sample = new AdoDotNetSample();
-sample.Read();
-sample.Create();
-sample.Edit();
+//AdoDotNetSample adoDotNetSample = new AdoDotNetSample();
+//adoDotNetSample.Read();
+//adoDotNetSample.Create();
+//adoDotNetSample.Edit();
+
+DapperSample dapperSample = new DapperSample();
+dapperSample.Read();
 
 //AdoDotNetSample sample2 = new AdoDotNetSample(new SqlConnectionStringBuilder
 //{
