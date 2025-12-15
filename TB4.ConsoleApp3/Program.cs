@@ -1,13 +1,24 @@
 ﻿using Microsoft.Data.SqlClient;
 using TB4.ConsoleApp3;
+using TB4.TestClassLibary;
 
 //AdoDotNetSample adoDotNetSample = new AdoDotNetSample();
 //adoDotNetSample.Read();
 //adoDotNetSample.Create();
 //adoDotNetSample.Edit();
 
-DapperSample dapperSample = new DapperSample();
-dapperSample.Read();
+//DapperSample dapperSample = new DapperSample();
+//dapperSample.Read();
+
+EfCoreSample efCoreSample = new EfCoreSample();
+efCoreSample.Read();
+efCoreSample.Edit();
+efCoreSample.Create();
+efCoreSample.Update();
+efCoreSample.Delete();
+
+TestClass testClass = new TestClass();
+testClass.Add(1, 2);
 
 //AdoDotNetSample sample2 = new AdoDotNetSample(new SqlConnectionStringBuilder
 //{
