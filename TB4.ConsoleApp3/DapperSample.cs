@@ -91,6 +91,15 @@ internal class DapperSample
 
     public void Delete()
     {
+        using (IDbConnection db = new SqlConnection(sb.ConnectionString))
+        {
+            db.Open();
 
+            string query = @"Delete from  [dbo].[Tbl_Product] where productid = 1";
+            int result = db.Execute(query);
+
+            string message = result > 0 ? "Deleting Successful." : "Deleting Failed.";
+            Console.WriteLine(message);
+        }
     }
 }
