@@ -86,7 +86,16 @@ internal class DapperSample
 
     public void Update()
     {
+        using(IDbConnection db = new SqlConnection(sb.ConnectionString))
+        {
+            db.Open();
+            string query = @"Delete from  [dbo].[Tbl_Product] set productname = mango where productid = 1";
+            int result = db.Execute(query);
 
+            string message = result > 0 ? "Updating Successful." : "Updating Failed.";
+            Console.WriteLine(message);
+
+        }
     }
 
     public void Delete()
